@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  display: grid;
+}
+
+header {
+  color: #fff;
+  text-align: center;
+  background-color: tomato;
+  padding: 1rem;
+}
+
+nav {
+  color: #fff;
+  background-color: #333;
+  padding: 1rem;
+}
+
+nav ul {
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  display: grid;
+}
+
+section {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+footer {
+  color: #fff;
+  text-align: center;
+  background-color: tomato;
+  padding: 1rem;
+}
+
+.cart-item {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.pizza-item img {
+  border-radius: 8px;
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.pizza-item {
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: .5rem;
+  display: grid;
+}
+
+#home {
+  text-align: center;
+  place-items: center;
+  display: grid;
+}
+
+#home img {
+  border-radius: 8px;
+  max-width: 100%;
+  margin-top: 20px;
+}
+/*# sourceMappingURL=index.4d663569.css.map */
