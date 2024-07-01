@@ -2565,7 +2565,20 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Cart", ()=>Cart);
 var _litHtml = require("lit-html");
 var _stateJs = require("../state/state.js");
+const submitOrder = async ()=>{
+    try {
+        const response = await axios.post("http://localhost:5000/api/order", {
+            items: (0, _stateJs.state).cart
+        });
+        console.log(response.data.message);
+        (0, _stateJs.state).cart = []; // Clear the cart after order
+        renderApp();
+    } catch (error) {
+        console.error("Error submitting order:", error);
+    }
+};
 const Cart = ()=>(0, _litHtml.html)`
+<button @click=${submitOrder}>Submit Order</button>
   <section id="cart">
     <h2>Your Cart</h2>
     <div id="cart-items">

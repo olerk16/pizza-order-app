@@ -30,6 +30,13 @@ app.get('/api/pizzas', (req, res) => {
   res.json(pizzas);
 });
 
+app.post('/api/order', (req, res) => {
+  const order = req.body;
+  // add database logic in futre 
+  console.log('Order received:', order);
+  res.status(201).json({ message: 'Order submitted successfully!' });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
